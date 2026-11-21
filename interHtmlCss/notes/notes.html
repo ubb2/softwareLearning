@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html notes</title>
+    <link rel="stylesheet" href="notes.css" />
+  </head>
+  <body>
+    <h1>SVGS:</h1>
+    <div class="svgs">
+      <!-- 
+          SVG image format
+    SVG ares a scale image format, stands for (Scalable Vector Graphics)
+    SVG source code is in XML (HTML-like syntax) which means its
+    human readable, unlike a lot of other image formats.
+
+    But, inefficient at storing complex images.
+
+    -->
+      <div class="svgContainer">
+        <!-- xlmns is what dialect of XML we are using -->
+        <!-- viewbox is the bounds of the SVG -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <rect x="0" y="0" width="100" height="100" fill="burlywood" />
+          <path
+            d="M 10 10 H 90 V 90 L 10 60"
+            fill="transparent"
+            stroke="black"
+            stroke-width="3"
+          />
+          <circle cx="50" cy="50" r="20" class="svg-circle" />
+          <g class="svg-text-group">
+            <text x="20" y="25" rotate="10" id="hello-text">Hello!</text>
+            <use href="#hello-text" x="-10" y="65" fill="white" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/
+       all things svg -->
+      <!-- 
+      Primitives in SVG (like primitives in html, like <p> or <h2>)
+        -->
+
+      <!-- Lines:
+    x1, y1 is the starting point of the line, x2, y2 is the end point
+      -->
+      <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <line
+            x1="80"
+            y1="80"
+            x2="200"
+            y2="200"
+            stroke="oklch(0.9 0.3 164)"
+            stroke-width="5"
+          />
+        </svg>
+      </div>
+
+      <!-- Rectangles: 
+    x, y is the top left corner
+    width and height are well, width and height
+    rx, ry are ways we can round corners
+    rx is radius in the x-axis, ry is radius in the y-axis
+     -->
+      <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <rect
+            x="60"
+            y="100"
+            width="180"
+            height="100"
+            fill="none"
+            stroke="oklch(0.9 0.3 164)"
+            stroke-width="5"
+          />
+        </svg>
+      </div>
+
+      <!-- Circles
+    radius r
+    center point cx, cy
+     -->
+      <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <circle
+            cx="140"
+            cy="140"
+            r="70"
+            fill="none"
+            stroke="oklch(0.9 0.3 164)"
+            stroke-width="5"
+          />
+        </svg>
+      </div>
+
+      <!-- Ellpises
+    radius rx, ry
+    center point cx, cy
+     -->
+      <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <ellipse
+            cx="150"
+            cy="150"
+            rx="75"
+            ry="50"
+            fill="none"
+            stroke="oklch(0.9 0.3 164)"
+            stroke-width="5"
+          />
+        </svg>
+      </div>
+
+      <!-- Polygons
+    Can create any shape using x,y points
+      -->
+
+      <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <polygon
+            points="
+            60,100
+            100,180
+            140,140
+            180,180
+            220,100
+            "
+            fill="none"
+            stroke="oklch(0.9 0.3 164)"
+            stroke-width="5"
+          />
+        </svg>
+      </div>
+
+      <!-- Attributes
+    fill: fills the shape
+    strokes: kind of like borders in html
+      we can choose color, width, type of line (dashed, not dashed
+      -->
+    </div>
+
+    <h1>Tables:</h1>
+  </body>
+</html>
