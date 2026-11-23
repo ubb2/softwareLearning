@@ -106,17 +106,36 @@ Acts like a normal element until the user scrolls past, then acts like a fixed e
 
  */
 
-/* Functions: -----------------------------------------------------------
+/* Functions and vars: ------------------------------------------------
+
 Like all programming languages, there are functions in css.
 Example of one we have seen like rbg() -> takes in rbg numbers as a argument and outputs a color.
 
 calc()
 Mixes units, can nest calcs in calcs.
 
-min() / max()
+min(a , b) / max(a, b)
 Outputs the smaller/bigger number
 
+clamp(a, b, c)
+a is min value, b is preferred value, c is max value
+useful if the preferred value changes depending on context
 
+Vars:
+syntax to declare a var: --varName: varValue;
+use the var() function to use a var
+Example:
+--color-error-text:red;
+color: var(--color-error-text, orange); 
+Here, orange would be the fallback value.
+
+Vars have scope, localized in the element it is defined in and its children.
+Global vars are declared in a root selector.
+
+We can take advantage of this by making multiple root nodes with different classes, 
+like "light" or "dark", and use JS to switch out the class of the root node in use.
+With CSS we would set different var values for the different classes, letting us switch
+themes easily.
 */
 
 /* 
