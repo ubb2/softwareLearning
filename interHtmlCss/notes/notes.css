@@ -1,3 +1,128 @@
+/* CSS resets: --------------------------------------------------------
+Just a way to rid of the intial browser css styling.
+This is because different browsers can have different css styling, so 
+removing the option that your css might rely on this specific browser default
+css styling is good.
+ */
+
+/* CSS Units: ---------------------------------------------------------
+There are different units in specifying length, width, etc.
+
+Absolute Units:
+Units that do not change in any context
+
+px: pixel (only absolute unit we should be using in web projects)
+in/cm : inches and centimeters (do not use these lol)
+
+Relative Units
+Units that change based on context.
+
+em/rem: refer to font size (prefer rem normally)
+em: font-size of the parent element
+rem: font-size of the root element
+
+vh/vw (viewport): refer to the height and width of the viewport
+1 is 1% for these
+ */
+
+/* Selectors ---------------------------------------------------------
+
+Combinators:
+Descendent(space): div p
+  All p elements inside a div
+
+Child(>): div>p
+  All p elements that are a direct child of a div
+
+Adjacent Sibling(+): div + p
+  p elements that are immediately after a div element
+
+General Sibling(~): h1 ~ p
+  all p elements that are siblings with an h1 element
+
+Grouping:
+All(,): h1, p, div
+  all h1, p, or div elements
+And(no space): div.className
+  all elements that are both a div and have a class called className
+
+*/
+/* Pseudo-Selectors: ----------------------------------------------------
+
+Pseudo-classes:
+prefixed with a single colon (:), targets elements that already exist
+but are special in someway.
+Examples:
+(:focus) are elements that are selected by the user
+(:hover) are elements that are hovered by the user's mouse
+(:active) are elements that are currently being clicked
+(:root) the top level element that has no parents
+(:first-child/ :last-child) are elements that are the first/last child of their parent
+(:nth-child()) are elements of a specific number, can use equations with n or just a number
+(:empty) are elements with no children
+(:only-child) are elements that are the only child
+also used to style visited and not visited links
+
+
+Pseudo-elements
+prefixedd with two colons (::), targets elements that aren't really elements
+
+Examples:
+(::marker) styling list bullets, nums, etc
+(::first-letter/ ::first-line) styling first letter/ first lines
+(::selection) styling what happens when a user highlights text
+(::before/ ::after) adds elements before and after the og element via css
+
+Attribute selectors
+uses attributes to select elements
+
+Examples:
+[attribute] selects elements with this attribute
+element[attribute] selects this specific element type with this type attribute
+element[attribute="name"] selects this specific element type with this attribute name
+[attribute^="value"] will select attribute with names starting with "value"
+[attribute$="value"] will select attribute with names ending with "value"
+[attribute*="value"] will select attributes with names that has "value" in the string
+
+ */
+
+/* Positioning: ------------------------------------------------------
+position: typeHere
+^ this is syntax
+
+Static/relative positioning:
+Static is default, relative is basically default but lets us use top/right/bottom/left
+
+Absolute Positioning:
+Allows us to position elements at this exact position 
+(reference point is the closest ancestor with non-static position or the largest containing block)
+
+Fixed Positioning:
+Allows us to position elements at the exact position in the viewing window
+(reference point is the viewport)
+
+Sticky Positioning:
+Acts like a normal element until the user scrolls past, then acts like a fixed element
+
+ */
+
+/* Functions: -----------------------------------------------------------
+Like all programming languages, there are functions in css.
+Example of one we have seen like rbg() -> takes in rbg numbers as a argument and outputs a color.
+
+calc()
+Mixes units, can nest calcs in calcs.
+
+min() / max()
+Outputs the smaller/bigger number
+
+
+*/
+
+/* 
+----------------------------------------------------------------------
+Styling for the html notes */
+
 .svgs {
   display: flex;
   flex-wrap: wrap;
@@ -6,10 +131,11 @@
 .svgContainer {
   min-width: 300px;
   min-height: 300px;
+
   margin: 20px;
   padding: 20px;
-  border-style: solid;
 
+  border-style: solid;
   border-color: black;
 }
 
