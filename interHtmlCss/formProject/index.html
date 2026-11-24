@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="compName">Not Real</div>
+    </div>
+
+    <div id="main">
+      <div id="desc">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form id="makeAccount">
+        <legend>Fill out please!</legend>
+        <div class="row">
+          <div class="box">
+            <label for="firstName">FIRST NAME</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div class="box">
+            <label for="lastName">LAST NAME</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="box">
+            <label for="number">PHONE NUMBER</label>
+            <input type="tel" id="number" name="number" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="box">
+            <label for="passwordTwo">CONFIRM PASSWORD</label>
+            <input type="passwordTwo" id="passwordTwo" name="passwordTwo" />
+          </div>
+        </div>
+      </form>
+      <div id="bottom">
+        <button type="submit" form="makeAccount">Create Account</button>
+        <div>
+          Already have an account?
+          <a href="./logIn.html">Log in</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
