@@ -201,5 +201,73 @@
         <td>Will eat till he explodes</td>
       </tr>
     </table>
+
+    <!-- 
+    FORMS!!! ----------------------------------------------------------------
+    A form element is a container which wraps all inputs a user will interact with/
+    Two important attributes:
+    action: takes a URL value which tells the form where the data should be sent.
+    method: tells the browser which HTTP request method it should use.
+            examples: GET method: when we want to retrieve something from a search
+                      like a google search
+                      POST method: when we want to change something from the server
+                      like an account made
+      
+    Control elements in the form element: Ways the user interacts with the form.
+    attributes:
+    name: var name for the input in the backend
+
+    Label element
+    the for attribute needs a id of a control element
+    <label for="first_name">First Name:</label>
+
+    Input element
+    <input type="text">
+    attributes:
+    type: type of input, like text, email, password, number, date.
+  
+                    
+    Text area element
+    a lil weird, search this up when u use it lol
+    input box of text that can span multiple lines
+    has a closing tag
+
+    Select element
+    Gives a dropdown list
+    <select name="varName">
+      <option value="mercedes">Mercedes</option>
+      <option value="volvo">Volvo</option>
+    </select>
+    name is still the var name in the backend of the input,
+    value is the actual value of the var name if the user selects that selection.
+    We can split the list into catagories using the optgroup element.
+    
+    Radio buttons (input element with a type of radio)
+    different radio button elements have the same name = they are in the same group
+    checked attribute: selected by default.
+
+    Checkboxes (input element with a type of checkbox)
+    works similarly to radio buttons, but more then one option can be selected
+
+    Buttons
+    Submit type: buttons that are a submit form
+    Reset type: buttons that resets form
+    Generic button: (type="button") just for general things
+
+
+    Organizing form elements
+
+    Fieldset element: groups related form input elements
+    Legend element: a caption/heading within the form
+
+
+    Validations:
+    required attribute: makes sure the form cannot be submitted unless this is filled out
+    minlength/maxlength attribute: the min/max length of this form via int
+    min/max: min/max number values of a number input
+    pattern: makes sure the input follows a certain pattern (like zipcode, card numbers, etc)
+
+    :user-valid, :user-invalid pseudo-classes for css styling
+    -->
   </body>
 </html>
